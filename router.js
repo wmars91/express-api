@@ -16,7 +16,7 @@ router.get('/users/:id',function(req, res){
 });
 
 router.post('/users',function(req, res){
-    res.send("POST BERHASIL");
+    res.send(req);
 });
 
 module.exports = router;
