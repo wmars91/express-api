@@ -1,13 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
 const router = require('./router');
-
 const app = express();
+
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
-// parse application/json
+ // parse application/json
 app.use(bodyParser.json());
 
 app.use(function (req, res) {
@@ -18,7 +17,7 @@ app.use(function (req, res) {
 
 app.use('/api',router);
 
-app.listen('5000', function(){
+app.listen('8000', function(){
     console.log('Server Express Dijalankan')
 });
 
